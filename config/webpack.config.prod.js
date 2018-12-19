@@ -391,12 +391,23 @@ module.exports = {
           },
           // Adds support for CSS Modules, but using SASS
           // using the extension .module.scss or .module.sass
+          // {
+          //   test: sassModuleRegex,
+          //   loader: getStyleLoaders(
+          //     {
+          //       importLoaders: 2,
+          //       sourceMap: shouldUseSourceMap,
+          //       modules: true,
+          //       getLocalIdent: getCSSModuleLocalIdent,
+          //     },
+          //     'sass-loader'
+          //   ),
+          // },
           {
             test: sassModuleRegex,
-            loader: getStyleLoaders(
+            use: getStyleLoaders(
               {
                 importLoaders: 2,
-                sourceMap: shouldUseSourceMap,
                 modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
               },
