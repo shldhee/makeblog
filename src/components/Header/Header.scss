@@ -29,6 +29,7 @@
       width: 16px;
       height: 2px;
       margin: 0px auto 2px;
+      transition: all 0.2s ease-in-out;
     }
 
     &-on &-bar:nth-child(1) {
@@ -37,16 +38,18 @@
       top: 2px;
       transition: all 0.2s ease-in-out;
     }
-
+  
     &-on &-bar:nth-child(2) {
       transform: rotate(-45deg);
       position: relative;
       top: -2px;
       transition: all 0.3s ease-in-out;
     }
-
+  
     &-on &-bar:nth-child(3) {
       display: none;
-    }
+    }  
   }
+
+  
 }

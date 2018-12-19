@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Header.scss';
-import Sns from '../HeaderSns'
+import './Menu.scss';
 
-class Header extends Component {
+class Menu extends Component {
   state = {
     isOpenMenu: false
   }
