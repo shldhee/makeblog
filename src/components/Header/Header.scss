@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 25px;
+  background-color: #fff;
+
+  &__sns {}
+
+  &__menu {
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+
+.nav {
+  &__btn {
+    display: inline-block;
+    width: 16px;
+    margin: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    // OS와 안드로이드의 웹킷 기반 브라우저(사파리, 크롬 등)에서 링크를 터치하면 해당 위치를 표시하는 하이라이트가 나타난다. 이 하이라이트의 색상을 바꾸고 싶을 때 사용할 수 있는 것이 -webkit-tap-highlight-color 이다
+    &-bar {
+      background-color: #555;
+      border-radius: 1px;
+      display: block;
+      width: 16px;
+      height: 2px;
+      margin: 0px auto 2px;
+    }
+
+    &-on &-bar:nth-child(1) {
+      transform: rotate(45deg);
+      position: relative;
+      top: 2px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &-on &-bar:nth-child(2) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: -2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-on &-bar:nth-child(3) {
+      display: none;
+    }
+  }
+}

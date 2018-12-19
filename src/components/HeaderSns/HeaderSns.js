@@ -1,4 +1,5 @@
 import React from 'react';
+import './HeaderSns.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const snsList = [

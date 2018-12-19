@@ -10,9 +10,15 @@ body {
 
 * {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: inherit;
   color: inherit;
+}
+
+li {
+  list-style: none;
 }
