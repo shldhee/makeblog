@@ -1,40 +1,27 @@
-import React, { Component } from 'react';
-import './Menu.scss';
+import React, { Component } from "react";
+import "./Menu.scss";
 
+const menuList = [
+  "HOME",
+  "FEATURES",
+  "TRAVEL",
+  "LIFESTYLE",
+  "FOOD",
+  "ABOUT",
+  "CONTACT"
+];
 class Menu extends Component {
-  state = {
-    isOpenMenu: false
-  }
-
-  handleClick = () => {
-    let {isOpenMenu} = this.state;
-    
-    this.setState({
-      isOpenMenu: !isOpenMenu
-    });
-  }
-
   render() {
-    let {isOpenMenu} = this.state;
-
     return (
-      <div className="header">
-        <div className="header__sns">
-          <Sns />
-        </div>
-        <div className="header__menu">
-          <div className="menu__btn" onClick={this.handleClick}>
-            Menu
-            <div className={`nav__btn ${isOpenMenu ? 'nav__btn-on' : ''}`}>
-              <span className="nav__btn-bar"></span>
-              <span className="nav__btn-bar"></span>
-              <span className="nav__btn-bar"></span>
-            </div>
-          </div>
-        </div>
+      <div>
+        <ul>
+          {menuList.map(menuObj => (
+            <li>{menuObj}</li>
+          ))}
+        </ul>
       </div>
-    )
+    );
   }
 }
 
-export default Header;
+export default Menu;

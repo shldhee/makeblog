@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
-import './Header.scss';
-import Sns from '../HeaderSns'
+import React, { Component } from "react";
+import "./Header.scss";
+import Sns from "../HeaderSns";
 
 class Header extends Component {
-  state = {
-    isOpenMenu: false
-  }
-
   handleClick = () => {
-    let {isOpenMenu} = this.state;
-    
-    this.setState({
-      isOpenMenu: !isOpenMenu
-    });
-  }
+    this.props.handleMenuClick();
+  };
 
   render() {
-    let {isOpenMenu} = this.state;
+    let { isToggleMenu } = this.props;
 
     return (
       <div className="header">
@@ -26,15 +18,15 @@ class Header extends Component {
         <div className="header__menu">
           <div className="menu__btn" onClick={this.handleClick}>
             Menu
-            <div className={`nav__btn ${isOpenMenu ? 'nav__btn-on' : ''}`}>
-              <span className="nav__btn-bar"></span>
-              <span className="nav__btn-bar"></span>
-              <span className="nav__btn-bar"></span>
+            <div className={`nav__btn ${isToggleMenu ? "nav__btn-on" : ""}`}>
+              <span className="nav__btn-bar" />
+              <span className="nav__btn-bar" />
+              <span className="nav__btn-bar" />
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
