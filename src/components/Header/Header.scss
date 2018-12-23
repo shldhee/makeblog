@@ -4,11 +4,14 @@
   padding: 13px 25px;
   background-color: #fff;
 
-  &__sns {}
-
   &__menu {
     cursor: pointer;
     font-size: 14px;
+  }
+
+  &-on {
+    transform: translateX(-200px);
+    transition: all .3s ease-in-out;
   }
 }
 
@@ -38,18 +41,18 @@
       top: 2px;
       transition: all 0.2s ease-in-out;
     }
-  
+
     &-on &-bar:nth-child(2) {
       transform: rotate(-45deg);
       position: relative;
       top: -2px;
       transition: all 0.3s ease-in-out;
     }
-  
+
     &-on &-bar:nth-child(3) {
       display: none;
-    }  
+    }
   }
 
-  
+
 }

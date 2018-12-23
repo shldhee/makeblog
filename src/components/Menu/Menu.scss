@@ -1,0 +1,25 @@
+.navigation {
+  width: 200px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 20px 34px 20px;
+  background: #1d1d1d;
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 9px 0;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
