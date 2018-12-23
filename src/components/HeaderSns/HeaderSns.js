@@ -19,17 +19,15 @@ const snsList = [
 
 const HeasderSns = () => {
   return (
-    <div>
-      <ul className="sns">
-        {snsList.map(sns => (
-          <li key={sns.name} className="sns__item">
-            <a className="sns__link" href={sns.link}>
-              <FontAwesomeIcon icon={["fab", `${sns.name}`]} />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="sns">
+      {snsList.map(sns => (
+        <li key={sns.name} className="sns__item">
+          <a className="sns__link" href={sns.link}>
+            <FontAwesomeIcon icon={["fab", `${sns.name}`]} />
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 

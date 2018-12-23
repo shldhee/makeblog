@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import './Menu.scss';
+import React, { Component } from "react";
+import "./Menu.scss";
+import Sns from "../HeaderSns";
 
 const menuList = [
-  'HOME',
-  'FEATURES',
-  'TRAVEL',
-  'LIFESTYLE',
-  'FOOD',
-  'ABOUT',
-  'CONTACT',
+  "HOME",
+  "FEATURES",
+  "TRAVEL",
+  "LIFESTYLE",
+  "FOOD",
+  "ABOUT",
+  "CONTACT"
 ];
 class Menu extends Component {
   render() {
@@ -23,6 +24,7 @@ class Menu extends Component {
             </li>
           ))}
         </ul>
+        <Sns />
       </nav>
     );
   }

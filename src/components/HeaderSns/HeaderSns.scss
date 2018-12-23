@@ -1,7 +1,6 @@
 .sns {
   &__item {
     display: inline-block;
-    color: $oc-gray-7;
 
     &:not(:first-child) {
       margin-left: 12px;
@@ -10,5 +9,6 @@
 
   &__link {
     font-size: 16px;
+    color: $oc-gray-7;
   }
 }
