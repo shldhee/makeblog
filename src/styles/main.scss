@@ -1,6 +1,8 @@
 @import url("//fonts.googleapis.com/css?family=Do+Hyeon:400");
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -10,6 +12,7 @@ body {
   font-family: "Do Hyeon", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1d1d1d;
 }
 
 * {

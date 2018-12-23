@@ -1,9 +1,19 @@
 .content {
   width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
 
   &__title {
+    font-size: 50px;
     text-align: center;
+    padding: 20px 0 50px;
+  }
+}
+
+.content__wrap {
+  background-color: $oc-gray-1;
+  transition: all 0.3s ease-in-out;
+
+  &-on {
+    transform: translateX(-200px);
   }
 }

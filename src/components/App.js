@@ -28,7 +28,7 @@ class App extends Component {
       <div>
         <Header isToggleMenu={isOpenMenu} handleMenuClick={handleMenuClick} />
         <Menu isToggleMenu={isOpenMenu} />
-        <Content />
+        <Content isToggleMenu={isOpenMenu} />
       </div>
     );
   }

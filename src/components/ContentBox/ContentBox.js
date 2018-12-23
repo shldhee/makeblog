@@ -15,21 +15,27 @@ const boxList = [
 class ContentBox extends Component {
   render() {
     return (
-      <div>
+      <>
         {boxList.map(boxObj => (
-          <>
-            <img className="box__img" src={boxObj.img} alt="" />
+          <div className="box" key={boxObj.title}>
+            <a className="box__link" href="#">
+              <img className="box__img" src={boxObj.img} alt="" />
+            </a>
             <div className="box__content">
-              <span className="box__category">{boxObj.category}</span>
-              <h3 className="box__title">{boxObj.title}</h3>
-              <div>
+              <a href="#" className="box__category">
+                {boxObj.category}
+              </a>
+              <a className="box__link" href="#">
+                <h3 className="box__title">{boxObj.title}</h3>
+              </a>
+              <div className="box__status">
                 <span className="box__like">{boxObj.like}</span>
                 <span className="box__comment">{boxObj.comment}</span>
               </div>
             </div>
-          </>
+          </div>
         ))}
-      </div>
+      </>
     );
   }
 }
