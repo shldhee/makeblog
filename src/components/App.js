@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Menu from "./Menu";
+import Content from "./Content";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
@@ -26,7 +27,8 @@ class App extends Component {
     return (
       <div>
         <Header isToggleMenu={isOpenMenu} handleMenuClick={handleMenuClick} />
-        <Menu />
+        <Menu isToggleMenu={isOpenMenu} />
+        <Content />
       </div>
     );
   }

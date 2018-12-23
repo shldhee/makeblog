@@ -3,18 +3,20 @@ import "./Menu.scss";
 import Sns from "../HeaderSns";
 
 const menuList = [
-  "HOME",
-  "FEATURES",
-  "TRAVEL",
-  "LIFESTYLE",
-  "FOOD",
-  "ABOUT",
-  "CONTACT"
+  "home",
+  "fetatures",
+  "travel",
+  "lifestyle",
+  "food",
+  "about",
+  "contact"
 ];
 class Menu extends Component {
   render() {
+    let { isToggleMenu } = this.props;
+
     return (
-      <nav className="navigation">
+      <nav className={`navigation ${isToggleMenu ? "navigation-on" : ""}`}>
         <ul className="navigation__list">
           {menuList.map(menuObj => (
             <li className="navigation__item" key={menuObj}>

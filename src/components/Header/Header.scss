@@ -3,16 +3,16 @@
   justify-content: space-between;
   padding: 13px 25px;
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
 
   &__menu {
     cursor: pointer;
     font-size: 14px;
   }
 
-  // &-on {
-  //   transform: translateX(-200px);
-  //   transition: all .3s ease-in-out;
-  // }
+  &-on {
+    transform: translateX(-200px);
+  }
 }
 
 .nav {

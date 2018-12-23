@@ -11,7 +11,7 @@ class Header extends Component {
     let { isToggleMenu } = this.props;
 
     return (
-      <div className={`header ${isToggleMenu ? "header header-on" : ""}`}>
+      <div className={`header ${isToggleMenu ? "header-on" : ""}`}>
         <div className="header__sns">
           <Sns />
         </div>

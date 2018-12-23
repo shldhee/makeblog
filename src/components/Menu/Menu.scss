@@ -5,6 +5,12 @@
   top: 0;
   padding: 20px 34px 20px;
   background: #1d1d1d;
+  transform: translateX(200px);
+  transition: all 0.3s ease-in-out;
+
+  &-on {
+    transform: translateX(0px);
+  }
 
   &__list {
   }
