@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './Header.scss';
-import Sns from '../HeaderSns';
+import React, { Component } from "react";
+import "./Header.scss";
+import Sns from "../HeaderSns";
 
 class Header extends Component {
   handleClick = () => {
@@ -11,7 +11,7 @@ class Header extends Component {
     let { isToggleMenu } = this.props;
 
     return (
-      <div className={`header ${isToggleMenu ? 'header header-on' : ''}`}>
+      <div className={`header ${isToggleMenu ? "header header-on" : ""}`}>
         <div className="header__sns">
           <Sns />
         </div>
@@ -20,8 +20,9 @@ class Header extends Component {
             Menu
             <div
               className={`nav__btn ${
-                isToggleMenu ? 'nav__btn nav__btn-on' : ''
-              }`}>
+                isToggleMenu ? "nav__btn nav__btn-on" : ""
+              }`}
+            >
               <span className="nav__btn-bar" />
               <span className="nav__btn-bar" />
               <span className="nav__btn-bar" />
