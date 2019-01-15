@@ -1,6 +1,23 @@
 import React, { Component } from "react";
 import "./Header.scss";
 import Sns from "../HeaderSns";
+import Menu from "../Menu";
+import { Link } from "react-router-dom";
+
+const snsList = [
+  {
+    name: "facebook",
+    link: "http://www.facebook.com"
+  },
+  {
+    name: "github",
+    link: "http://www.github.com"
+  },
+  {
+    name: "instagram",
+    link: "http://www.instagram.com"
+  }
+];
 
 class Header extends Component {
   handleClick = () => {
@@ -10,11 +27,17 @@ class Header extends Component {
   render() {
     let { isToggleMenu } = this.props;
 
-    return (
+    return [
       <div className={`header ${isToggleMenu ? "header-on" : ""}`}>
         <div className="header__sns">
-          <Sns />
+            <ul className="sns">
+              {
+                snsList.map(sns => <Sns key={sns.name} link={sns.link} name={sns.name} />)
+              }
+            </ul>
         </div>
+        <Link to="/write">Write</Link>
+        <Link to="/home">Home</Link>
         <div className="header__menu">
           <div className="menu__btn" onClick={this.handleClick}>
             Menu
@@ -29,8 +52,9 @@ class Header extends Component {
             </div>
           </div>
         </div>
-      </div>
-    );
+      </div>,
+      <Menu isToggleMenu={isToggleMenu} snsList={snsList}/>
+    ]
   }
 }
 

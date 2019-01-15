@@ -4,7 +4,7 @@ import Sns from "../HeaderSns";
 
 const menuList = [
   "home",
-  "fetatures",
+  "features",
   "travel",
   "lifestyle",
   "food",
@@ -13,7 +13,7 @@ const menuList = [
 ];
 class Menu extends Component {
   render() {
-    let { isToggleMenu } = this.props;
+    let { isToggleMenu, snsList } = this.props;
 
     return (
       <nav className={`navigation ${isToggleMenu ? "navigation-on" : ""}`}>
@@ -26,7 +26,11 @@ class Menu extends Component {
             </li>
           ))}
         </ul>
-        <Sns />
+        <ul className="sns">
+          {
+            snsList.map(sns => <Sns key={sns.name} link={sns.link} name={sns.name} />)
+          }
+        </ul>
       </nav>
     );
   }
